@@ -1,13 +1,20 @@
 var http = require('http');
-var babble = require('technobabble/technobabble');
+var url = require('url');
+var swig = require('swig');
+var TechnoBabble = require('technobabble');
 
 var server = http.createServer(function(req, res) {
-  var content = babble.sentence();
-  console.log(content);
+  var query = url.parse(req.url, true).query;
+  var babble = new TechnoBabble({ length: query.length, subject: query.subject });
+  var content = swig.renderFile('index.html', {
+    babble: babble().replace(/^undefined /, ''),
+    length: query.length,
+    subject: query.subject
+  });
 
   res.writeHead(200, {
     'Content-Length': Buffer.byteLength(content),
-    'Content-Type': 'text/plain'
+    'Content-Type': 'text/html'
   });
 
   res.end(content);

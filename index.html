@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>TechnoBabble Generator</title>
+
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+		<style>
+			footer {
+				bottom: 0;
+				position: fixed;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="pure-g">
+			<h1 class="pure-u-1">TechnoBabble Generator</h1>
+		</header>
+		<section class="pure-g" id="controls">
+			<form class="pure-u-1 pure-form pure-form-aligned">
+				<label for="length">Sentence Length </label>
+				<input id="length" name="length" type="text" value="{{ length }}">
+				<label for="subject">Subject </label>
+				<input id="subject" name="subject" type="text" value="{{ subject }}">
+				<button class="pure-button pure-button-primary" type="submit">Generate</button>
+			</form>
+		</section>
+		<hr>
+		<section class="pure-g" id="content">
+			<div class="pure-u-1">{{ babble }}</div>
+		</section>
+		<footer class="pure-g">
+			<div class="pure-u-1">&copy; Copyright 2016 <a href="mailto:jacob.roufa@gmail.com">Jacob M. Roufa</a></div>
+		</footer>
+	</body>
+</html>

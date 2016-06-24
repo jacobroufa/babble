@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "swig": "1.4.2",
     "technobabble": "git+https://github.com/jacobroufa/technobabble.git"
   }
 }
