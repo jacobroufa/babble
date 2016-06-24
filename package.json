@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "technobabble": "git+https://github.com/lawren/technobabble.git"
+    "technobabble": "git+https://github.com/jacobroufa/technobabble.git"
   }
 }
